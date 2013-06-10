@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse navbar-static-top" ng-controller="HeaderCtrl">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/#/">LunchIt</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li menu-point>
+                        <a href="/#/">Заказ</a>
+                    </li>
+                    <li menu-point>
+                        <a href="/#/menu">Меню</a>
+                    </li>
+                    <li menu-point>
+                        <a href="/#/billing">Биллинг</a>
+                    </li>
+                    <li menu-point>
+                        <a href="/#/providers">Поставщики</a>
+                    </li>
+                    <li menu-point>
+                        <a href="/#/settings">Настройки</a>
+                    </li>
+                </ul>
+
+                <div class="nav-buttons pull-right">
+                    <a class="btn btn-success" href="#" ng-click="loginPopup()">Войти</a>
+                </div>
+            </div>
+
+            <!--<p class="hello-block navbar-text pull-right" ng-show="isAuthenticated()">Hello, <a href="/#/profile">{{ user.email }}</a></p>-->
+        </div>
+    </div>
+</div>

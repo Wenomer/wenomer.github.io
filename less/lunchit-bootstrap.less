@@ -1,0 +1,53 @@
+@btnSuccess:                #b1ba61;
+@btnSuccessHighlight:       #b1ba61;
+@btnWarning:                red;
+@btnWarningHighlight:       red;
+
+.navbar{
+    .navbar-inner{
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: none;
+        padding: 10px 0;
+        border: 0;
+    }
+
+    .brand{
+        background: url('../img/logo.png') no-repeat;
+        .size(53px, 184px);
+        .hide-text();
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .nav {
+        margin-top: 13px;
+        margin-left: 25px;
+
+        li{
+            background: url("../img/header-link-border-right.png") right 0px repeat-y;
+
+            &:last-child{
+                background: none;
+            }
+
+            & > a{
+                padding: 0 3px 3px 3px;
+                margin: 0px 20px 2px 14px;
+            }
+        }
+        .active {
+            & > a, & > a:hover{
+                background-color: inherit;
+                background: url("../img/header-active-link-border-bottom.png") 0px bottom repeat-x;
+                .box-shadow(none);
+            }
+        }
+    }
+}
+
+.btn-warning {
+    .buttonBackground(@btnWarning, @btnWarningHighlight);
+}
+.btn-success {
+    .buttonBackground(@btnSuccess, @btnSuccessHighlight);
+}

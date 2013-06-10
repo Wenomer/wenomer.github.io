@@ -1,0 +1,23 @@
+<div ng-controller="DashboardCtrl">
+    <div class="calendar-row clearfix">
+        <div class="calendar pull-right">Calendar</div>
+    </div>
+    <div class="week">
+        <div class="week-row row-fluid" ng-repeat="line in [1,2,3]">
+            <div class="span4"ng-repeat="day in week | slice:$index*3:$index*3+3">
+                <div class="day">
+                    <div class="day-head">
+                        <a class="btn btn-success" href="#"><i class="icon-star"></i> Заказать</a>
+                        <span human-date="{{day.date}}"></span>
+                    </div>
+                    <div class="day-body">
+                        <div ng-repeat="row in day.order">{{row.user.name}}   |   {{row.dishes}}   |   {{row.amount}}</div>
+                    </div>
+                    <div class="day-foot" ng-show="day.order.length">
+                        Итого:
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
